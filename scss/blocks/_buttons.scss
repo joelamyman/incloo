@@ -1,0 +1,23 @@
+.incloo-c-button {
+  background-color: var(--incloo-button-color-background-primary-default-light);
+  border: 0.25em solid var(--incloo-button-color-border-primary-default-light);
+  color: var(--incloo-button-color-font-primary-default-light);
+  padding: 1em 1.5em;
+  position: relative;
+  &:hover {
+    background-color: var(--incloo-button-color-background-primary-hover-light);
+    border: 0.25em solid var(--incloo-button-color-border-primary-hover-light);
+    color: var(--incloo-button-color-font-primary-hover-light);
+    cursor: pointer;
+  }
+  &:active {
+    background-color: var(--incloo-button-color-background-primary-active-light);
+    border: 0.25em solid var(--incloo-button-color-border-primary-active-light);
+    color: var(--incloo-button-color-font-primary-active-light);
+    top: 0.1em;
+  }
+  &:focus {
+    outline: 0.2em dashed purple;
+    outline-offset: 0.1em;
+  }
+}

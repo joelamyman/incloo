@@ -1,0 +1,10 @@
+// Settings
+@import 'settings/colours';
+@import 'settings/typography';
+
+p {
+  font-size: 1rem;
+}
+
+// Blocks
+@import 'blocks/buttons';

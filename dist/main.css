@@ -1,0 +1,91 @@
+html {
+  --incloo-button-color-background-primary-default-light: #0000ff;
+  --incloo-button-color-border-primary-default-light: #0000aa;
+  --incloo-button-color-font-primary-default-light: #fff;
+  --incloo-button-color-background-primary-hover-light: #000055;
+  --incloo-button-color-border-primary-hover-light: #0000aa;
+  --incloo-button-color-font-primary-hover-light: #fff;
+  --incloo-button-color-background-primary-active-light: #ff0000;
+  --incloo-button-color-border-primary-active-light: #0000aa;
+  --incloo-button-color-font-primary-active-light: #fff;
+}
+
+html {
+  --incloo-typography-font-size-400: 1rem;
+  --incloo-typography-font-size-500: 1.25rem;
+  --incloo-typography-font-size-600: 1.563rem;
+  --incloo-typography-font-size-700: 1.953rem;
+  --incloo-typography-font-size-800: 2.441rem;
+  --incloo-typography-font-size-900: 3.052rem;
+  --incloo-typograaphy-line-height-headings: 1.5;
+  --incloo-typograaphy-line-height-copy: 1.3rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: var(--incloo-typograaphy-line-height-headings);
+  margin: 0;
+}
+
+h1 {
+  font-size: var(--incloo-typography-font-size-900);
+}
+
+h2 {
+  font-size: var(--incloo-typography-font-size-800);
+}
+
+h3 {
+  font-size: var(--incloo-typography-font-size-700);
+}
+
+h4 {
+  font-size: var(--incloo-typography-font-size-600);
+}
+
+h5 {
+  font-size: var(--incloo-typography-font-size-500);
+}
+
+h6 {
+  font-size: var(--incloo-typography-font-size-400);
+}
+
+p, li, a {
+  font-size: var(--incloo-typography-font-size-500);
+  line-height: var(--incloo-typograaphy-line-height-copy);
+  margin: 0;
+}
+
+p + p, li + li {
+  margin-top: calc(var(--incloo-typograaphy-line-height-copy) / 2);
+}
+
+p {
+  font-size: 1rem;
+}
+
+.incloo-c-button {
+  background-color: var(--incloo-button-color-background-primary-default-light);
+  border: 0.25em solid var(--incloo-button-color-border-primary-default-light);
+  color: var(--incloo-button-color-font-primary-default-light);
+  padding: 1em 1.5em;
+  position: relative;
+}
+.incloo-c-button:hover {
+  background-color: var(--incloo-button-color-background-primary-hover-light);
+  border: 0.25em solid var(--incloo-button-color-border-primary-hover-light);
+  color: var(--incloo-button-color-font-primary-hover-light);
+  cursor: pointer;
+}
+.incloo-c-button:active {
+  background-color: var(--incloo-button-color-background-primary-active-light);
+  border: 0.25em solid var(--incloo-button-color-border-primary-active-light);
+  color: var(--incloo-button-color-font-primary-active-light);
+  top: 0.1em;
+}
+.incloo-c-button:focus {
+  outline: 0.2em dashed purple;
+  outline-offset: 0.1em;
+}
+
+/*# sourceMappingURL=main.css.map */
