@@ -1,23 +1,34 @@
 .incloo-c-button {
   background-color: var(--incloo-button-color-background-primary-default-light);
   border: 0.25em solid var(--incloo-button-color-border-primary-default-light);
+  border-radius: var(--incloo-button-border-radius-default);
   color: var(--incloo-button-color-font-primary-default-light);
-  padding: 1em 1.5em;
+  font-weight: 700;
+  line-height: var(--incloo-typograaphy-line-height-body);
+  padding: 0.25em 0.75em;
   position: relative;
+
   &:hover {
     background-color: var(--incloo-button-color-background-primary-hover-light);
     border: 0.25em solid var(--incloo-button-color-border-primary-hover-light);
     color: var(--incloo-button-color-font-primary-hover-light);
     cursor: pointer;
+    text-decoration: underline;
   }
+
+  &:focus {
+    // outline: 0.2em dashed var(--incloo-focus-color-default);
+    // outline-offset: 0.1em;
+    background-color: var(--incloo-button-color-background-primary-focus-light);
+    border: 0.25em solid var(--incloo-button-color-border-primary-focus-light);
+    color: var(--incloo-button-color-font-primary-focus-light);
+  }
+
   &:active {
     background-color: var(--incloo-button-color-background-primary-active-light);
     border: 0.25em solid var(--incloo-button-color-border-primary-active-light);
+    border-bottom-color: var(--incloo-button-color-border-primary-focus-light);
     color: var(--incloo-button-color-font-primary-active-light);
     top: 0.1em;
-  }
-  &:focus {
-    outline: 0.2em dashed purple;
-    outline-offset: 0.1em;
   }
 }

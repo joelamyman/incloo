@@ -1,0 +1,28 @@
+.incloo-c-link {
+  // background-color: var(--incloo-button-color-background-primary-hover-light);
+  // border: 0.25em solid var(--incloo-button-color-border-primary-hover-light);
+  color: var(--incloo-link-color-font-primary-default-light);
+  display: inline-block;
+  text-decoration: underline;
+  text-decoration-thickness: 0.15em;
+
+  &:hover {
+    // background-color: var(--incloo-button-color-background-primary-hover-light);
+    // border: 0.25em solid var(--incloo-button-color-border-primary-hover-light);
+    color: var(--incloo-link-color-font-primary-hover-light);
+    text-decoration-thickness: 0.3em;
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: var(--incloo-button-color-background-primary-active-light);
+    color: var(--incloo-button-color-font-primary-active-light);
+    text-decoration: none;
+    top: 0.1em;
+  }
+
+  &:focus {
+    outline: 0.2em solid var(--incloo-link-color-font-primary-focus-light);
+    outline-offset: 0.1em;
+  }
+}

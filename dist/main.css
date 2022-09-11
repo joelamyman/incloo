@@ -1,27 +1,126 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 html {
-  --incloo-button-color-background-primary-default-light: #0000ff;
-  --incloo-button-color-border-primary-default-light: #0000aa;
-  --incloo-button-color-font-primary-default-light: #fff;
-  --incloo-button-color-background-primary-hover-light: #000055;
-  --incloo-button-color-border-primary-hover-light: #0000aa;
-  --incloo-button-color-font-primary-hover-light: #fff;
-  --incloo-button-color-background-primary-active-light: #ff0000;
-  --incloo-button-color-border-primary-active-light: #0000aa;
-  --incloo-button-color-font-primary-active-light: #fff;
+  --incloo-button-color-background-primary-default-light: #0062F5;
+  --incloo-button-color-border-primary-default-light: #0062F5;
+  --incloo-button-color-font-primary-default-light: #FFF;
+  --incloo-button-color-background-primary-hover-light: #002152;
+  --incloo-button-color-border-primary-hover-light: #002152;
+  --incloo-button-color-font-primary-hover-light: #FFF;
+  --incloo-button-color-background-primary-focus-light: #0062F5;
+  --incloo-button-color-border-primary-focus-light: #002152;
+  --incloo-button-color-font-primary-focus-light: #FFF;
+  --incloo-button-color-background-primary-active-light: #0062F5;
+  --incloo-button-color-border-primary-active-light: #0062F5;
+  --incloo-button-color-font-primary-active-light: #FFF;
+  --incloo-link-color-font-primary-default-light: #0062F5;
+  --incloo-link-color-font-primary-hover-light: #0062F5;
+  --incloo-link-color-font-primary-focus-light: #0062F5;
+  --incloo-focus-color-default: #002152;
 }
 
 html {
-  --incloo-typography-font-size-400: 1rem;
-  --incloo-typography-font-size-500: 1.25rem;
-  --incloo-typography-font-size-600: 1.563rem;
-  --incloo-typography-font-size-700: 1.953rem;
-  --incloo-typography-font-size-800: 2.441rem;
-  --incloo-typography-font-size-900: 3.052rem;
+  --incloo-button-border-radius-default: 0;
+}
+
+html {
+  --incloo-typography-headings: "Merriweather", serif;
+  --incloo-typography-body: "Inter", sans-serif;
+  --incloo-typography-font-size-400: 0.8rem;
+  --incloo-typography-font-size-500: 1rem;
+  --incloo-typography-font-size-600: 1.25rem;
+  --incloo-typography-font-size-700: 1.563rem;
+  --incloo-typography-font-size-800: 1.953rem;
+  --incloo-typography-font-size-900: 2.441rem;
   --incloo-typograaphy-line-height-headings: 1.5;
-  --incloo-typograaphy-line-height-copy: 1.3rem;
+  --incloo-typograaphy-line-height-body: 1.3;
 }
 
-h1, h2, h3, h4, h5, h6 {
+* {
+  line-height: var(--incloo-typograaphy-line-height-body);
+  font-family: var(--incloo-typography-body);
+  font-size: var(--incloo-typography-font-size-500);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--incloo-typography-headings);
   line-height: var(--incloo-typograaphy-line-height-headings);
   margin: 0;
 }
@@ -50,25 +149,27 @@ h6 {
   font-size: var(--incloo-typography-font-size-400);
 }
 
-p, li, a {
+p,
+li,
+a {
   font-size: var(--incloo-typography-font-size-500);
   line-height: var(--incloo-typograaphy-line-height-copy);
   margin: 0;
 }
 
-p + p, li + li {
-  margin-top: calc(var(--incloo-typograaphy-line-height-copy) / 2);
-}
-
-p {
-  font-size: 1rem;
+p + p,
+li + li {
+  margin-top: calc(var(--incloo-typograaphy-line-height-copy)/2);
 }
 
 .incloo-c-button {
   background-color: var(--incloo-button-color-background-primary-default-light);
   border: 0.25em solid var(--incloo-button-color-border-primary-default-light);
+  border-radius: var(--incloo-button-border-radius-default);
   color: var(--incloo-button-color-font-primary-default-light);
-  padding: 1em 1.5em;
+  font-weight: 700;
+  line-height: var(--incloo-typograaphy-line-height-body);
+  padding: 0.25em 0.75em;
   position: relative;
 }
 .incloo-c-button:hover {
@@ -76,15 +177,59 @@ p {
   border: 0.25em solid var(--incloo-button-color-border-primary-hover-light);
   color: var(--incloo-button-color-font-primary-hover-light);
   cursor: pointer;
+  text-decoration: underline;
+}
+.incloo-c-button:focus {
+  background-color: var(--incloo-button-color-background-primary-focus-light);
+  border: 0.25em solid var(--incloo-button-color-border-primary-focus-light);
+  color: var(--incloo-button-color-font-primary-focus-light);
 }
 .incloo-c-button:active {
   background-color: var(--incloo-button-color-background-primary-active-light);
   border: 0.25em solid var(--incloo-button-color-border-primary-active-light);
+  border-bottom-color: var(--incloo-button-color-border-primary-focus-light);
   color: var(--incloo-button-color-font-primary-active-light);
   top: 0.1em;
 }
-.incloo-c-button:focus {
-  outline: 0.2em dashed purple;
+
+.incloo-c-text-input {
+  border: 0.125em solid black;
+  display: block;
+  padding: 0.5em 0.25em;
+}
+.incloo-c-text-input:focus {
+  border-color: #0062F5;
+}
+
+.incloo-c-label {
+  display: block;
+  font-size: var(--incloo-typography-font-size-600);
+}
+
+.incloo-c-sub-label {
+  display: block;
+  font-size: var(--incloo-typography-font-size-400);
+}
+
+.incloo-c-link {
+  color: var(--incloo-link-color-font-primary-default-light);
+  display: inline-block;
+  text-decoration: underline;
+  text-decoration-thickness: 0.15em;
+}
+.incloo-c-link:hover {
+  color: var(--incloo-link-color-font-primary-hover-light);
+  text-decoration-thickness: 0.3em;
+  cursor: pointer;
+}
+.incloo-c-link:active {
+  background-color: var(--incloo-button-color-background-primary-active-light);
+  color: var(--incloo-button-color-font-primary-active-light);
+  text-decoration: none;
+  top: 0.1em;
+}
+.incloo-c-link:focus {
+  outline: 0.2em solid var(--incloo-link-color-font-primary-focus-light);
   outline-offset: 0.1em;
 }
 

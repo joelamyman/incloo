@@ -1,0 +1,9 @@
+.incloo-c-text-input {
+  border: 0.125em solid black;
+  display: block;
+  padding: 0.5em 0.25em;
+
+  &:focus {
+    border-color: #0062F5;
+  }
+}
